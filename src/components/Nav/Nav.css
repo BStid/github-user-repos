@@ -1,0 +1,14 @@
+.navContainer {
+  height: 10%;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navContainer h3 {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-left: 20px;
+}
