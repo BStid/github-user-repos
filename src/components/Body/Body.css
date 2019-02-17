@@ -1,0 +1,7 @@
+.bodyContainer {
+  height: 90%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

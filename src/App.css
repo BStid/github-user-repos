@@ -1,9 +1,9 @@
-.outerContainer{
+.outerContainer {
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
-  background-color: rgb(237,240,245);
+  background-color: rgb(237, 240, 245);
 }
-

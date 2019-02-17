@@ -1,0 +1,25 @@
+.inputContainer {
+  height: 5%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.userInput {
+  height: 85%;
+  width: 95%;
+  font-size: 15px;
+  outline: none;
+}
+
+.searchButton {
+  height: 100%;
+  width: 5%;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 0px 7px 7px 0px;
+  background-color: rgb(33, 135, 249);
+  outline: none;
+  cursor: pointer;
+}
