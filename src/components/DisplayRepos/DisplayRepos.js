@@ -5,7 +5,6 @@ import LanguageIcon from "./LanguageIcon/LanguageIcon";
 import "./DisplayRepos.css";
 
 export default function DisplayRepos(props) {
-  console.log(props.repositories);
   let renderRepos;
   if (!props.repositories) {
     renderRepos = <DisplayError />;
