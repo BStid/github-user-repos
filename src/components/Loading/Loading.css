@@ -1,0 +1,31 @@
+.loadingContainer {
+  height: 95%;
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loadingIcon {
+  height: auto;
+  width: 168px;
+  animation: sk-rotateplane 2.2s infinite ease-in-out;
+}
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+  75% {
+    transform: perspective(120px) rotate(0deg) rotateY(-180deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+}
