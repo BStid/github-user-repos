@@ -49,6 +49,6 @@ const hashLanguageToColor = name => {
     case 10:
       return "black";
     default:
-      return "white";
+      return "gray";
   }
 };
