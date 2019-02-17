@@ -16,6 +16,7 @@ class Body extends Component {
     this.renderRepos = this.renderRepos.bind(this);
   }
   renderRepos(username) {
+    this.setState({ isLoading: true });
     getUserRepos(
       `https://api.github.com/search/repositories?q=user:${username}+stars:<=500&sort=stars`
     ).then(data => {

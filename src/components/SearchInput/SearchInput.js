@@ -4,9 +4,6 @@ import { updateInput } from "../../redux/reducer";
 import "./SearchInput.css";
 
 class SearchInput extends Component {
-  checkRepo = () => {
-    console.log(this.props.repos);
-  };
   render() {
     const { updateInput, inputValue } = this.props;
     return (
@@ -23,8 +20,6 @@ class SearchInput extends Component {
         >
           Search
         </button>
-
-        <button onClick={() => this.checkRepo()}>Test Test Test</button>
       </div>
     );
   }

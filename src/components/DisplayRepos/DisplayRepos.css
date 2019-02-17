@@ -3,12 +3,35 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .repoContainer {
   height: 20vh;
   width: 20vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 3px 10px 32px -6px rgba(0, 0, 0, 0.75);
+  margin: 25px;
+}
+.repoName {
+  height: 40%;
+  width: 100%;
+  font-weight: 600;
+  display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 10px 31px -14px rgba(0, 0, 0, 0.75);
+}
+.repoBody {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  color: gray;
+  text-align: center;
 }
