@@ -24,7 +24,7 @@ export default function DisplayRepos(props) {
           {repo.language ? (
             <LanguageIcon language={repo.language} />
           ) : (
-            "No Language Detected!"
+            <i>"No Language Detected!"</i>
           )}
         </div>
       </div>

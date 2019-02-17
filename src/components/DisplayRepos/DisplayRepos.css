@@ -16,7 +16,13 @@
   box-shadow: 3px 10px 32px -6px rgba(0, 0, 0, 0.75);
   margin: 25px;
   cursor: pointer;
+  transition: 0.3s;
 }
+.repoContainer:hover {
+  box-shadow: 3px 10px 32px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.3s;
+}
+
 .repoName {
   height: 25%;
   width: 100%;
@@ -25,6 +31,11 @@
   justify-content: center;
   align-items: center;
   box-shadow: 3px 10px 31px -14px rgba(0, 0, 0, 0.75);
+  transition: 0.3s;
+}
+.repoName:hover {
+  box-shadow: 3px 10px 31px -5px rgba(0, 0, 0, 0.75);
+  transition: 0.3s;
 }
 .repoBody {
   height: 30%;

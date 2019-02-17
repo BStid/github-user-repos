@@ -1,5 +1,4 @@
 import React from "react";
-import "./LanguageIcon.css";
 
 export default function LanguageIcon(props) {
   let styles = {
@@ -16,11 +15,7 @@ export default function LanguageIcon(props) {
     borderRadius: "0.3rem",
     boxShadow: "1px 1px 7px 0px white inset"
   };
-  return (
-    <div style={styles} className="languageIcon">
-      {props.language}
-    </div>
-  );
+  return <div style={styles}>{props.language}</div>;
 }
 
 const hashLanguageToColor = name => {
