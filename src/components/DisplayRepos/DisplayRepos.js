@@ -5,34 +5,35 @@ import "./DisplayRepos.css";
 
 export default function DisplayRepos(props) {
   console.log(props.repositories);
-  let renderRepos = props.repositories.map((repo, index) => {
-    return index < 12 ? (
-      <div
-        className="repoContainer"
-        key={index}
-        onClick={() => window.open(repo.html_url, "_blank")}
-      >
-        <div className="repoName">{repo.name}</div>
-        <div className="repoBody">
-          {repo.description
-            ? repo.description
-            : "Oops! This repository does not have a description!"}
+  if (!props.repositories) {
+    var renderRepos = <DisplayError />;
+  } else {
+    var renderRepos = props.repositories.map((repo, index) => {
+      return index < 12 ? (
+        <div
+          className="repoContainer"
+          key={index}
+          onClick={() => window.open(repo.html_url, "_blank")}
+        >
+          <div className="repoName">{repo.name}</div>
+          <div className="repoBody">
+            {repo.description
+              ? repo.description
+              : "Oops! This repository does not have a description!"}
+          </div>
+          <div className="repoLanguage">
+            Language:
+            <br />
+            {repo.language ? (
+              <LanguageIcon language={repo.language} />
+            ) : (
+              <i>"No Language Detected!"</i>
+            )}
+          </div>
         </div>
-        <div className="repoLanguage">
-          Language:
-          <br />
-          {repo.language ? (
-            <LanguageIcon language={repo.language} />
-          ) : (
-            <i>"No Language Detected!"</i>
-          )}
-        </div>
-      </div>
-    ) : null;
-  });
-  return (
-    <div className="displayContainer">
-      {!renderRepos ? <DisplayError /> : renderRepos}
-    </div>
-  );
+      ) : null;
+    });
+  }
+
+  return <div className="displayContainer">{renderRepos}</div>;
 }
