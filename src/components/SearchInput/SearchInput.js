@@ -4,6 +4,11 @@ import { updateInput } from "../../redux/reducer";
 import "./SearchInput.css";
 
 class SearchInput extends Component {
+  pressEnter = event => {
+    if (event.keyCode === 13) {
+      this.props.renderRepos(this.props.inputValue);
+    }
+  };
   render() {
     const { updateInput, inputValue } = this.props;
     return (
@@ -13,6 +18,7 @@ class SearchInput extends Component {
           type="text"
           placeholder="Input Username Here"
           onChange={e => updateInput(e.target.value)}
+          onKeyDown={e => this.pressEnter(e)}
         />
         <button
           className="searchButton"

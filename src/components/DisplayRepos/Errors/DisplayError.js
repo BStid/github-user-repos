@@ -1,6 +1,6 @@
 import React from "react";
-import OctoCat from "./images/Octocat.png";
-import "./DisplayRepos.css";
+import OctoCat from "../images/Octocat.png";
+import "../DisplayRepos.css";
 
 export default function DisplayError() {
   return (

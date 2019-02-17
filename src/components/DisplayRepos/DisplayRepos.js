@@ -1,5 +1,6 @@
 import React from "react";
-import DisplayError from "./DisplayError";
+import DisplayError from "./Errors/DisplayError";
+import NoReposError from "./Errors/NoReposError";
 import LanguageIcon from "./LanguageIcon/LanguageIcon";
 import "./DisplayRepos.css";
 
@@ -7,6 +8,8 @@ export default function DisplayRepos(props) {
   console.log(props.repositories);
   if (!props.repositories) {
     var renderRepos = <DisplayError />;
+  } else if (props.repositories.length < 1) {
+    var renderRepos = <NoReposError />;
   } else {
     var renderRepos = props.repositories.map((repo, index) => {
       return index < 12 ? (
