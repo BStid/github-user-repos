@@ -13,22 +13,24 @@ class Body extends Component {
       isLoading: true,
       repositories: []
     };
+    this.renderRepos = this.renderRepos.bind(this);
   }
-  componentDidMount() {
-    console.log(this.state.repositories);
+  renderRepos(username) {
     getUserRepos(
-      `https://api.github.com/search/repositories?q=user:${
-        this.props.inputValue
-      }+stars:<=500&sort=stars`
+      `https://api.github.com/search/repositories?q=user:${username}+stars:<=500&sort=stars`
     ).then(data => {
       this.setState({ repositories: data.items, isLoading: false });
     });
+  }
+  componentDidMount() {
+    /* importing fetch function created within the 'api' directory */
+    this.renderRepos(this.props.inputValue);
   }
   render() {
     const { isLoading, repositories } = this.state;
     return (
       <div className="bodyContainer">
-        <SearchInput />
+        <SearchInput renderRepos={this.renderRepos} />
         {isLoading ? <Loading /> : <DisplayRepos repositories={repositories} />}
       </div>
     );

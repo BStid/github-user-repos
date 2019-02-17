@@ -1,0 +1,14 @@
+.displayContainer {
+  height: 95%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.repoContainer {
+  height: 20vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

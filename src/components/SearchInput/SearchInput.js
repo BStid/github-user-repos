@@ -8,7 +8,7 @@ class SearchInput extends Component {
     console.log(this.props.repos);
   };
   render() {
-    const { updateInput, getRepos, inputValue } = this.props;
+    const { updateInput, inputValue } = this.props;
     return (
       <div className="inputContainer">
         <input
@@ -17,7 +17,10 @@ class SearchInput extends Component {
           placeholder="Input Username Here"
           onChange={e => updateInput(e.target.value)}
         />
-        <button className="searchButton" onClick={() => getRepos(inputValue)}>
+        <button
+          className="searchButton"
+          onClick={() => this.props.renderRepos(inputValue)}
+        >
           Search
         </button>
 
