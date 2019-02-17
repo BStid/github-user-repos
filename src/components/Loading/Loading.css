@@ -9,7 +9,7 @@
 }
 .loadingIcon {
   height: auto;
-  width: 168px;
+  width: 100px;
   animation: sk-rotateplane 2.2s infinite ease-in-out;
 }
 @keyframes sk-rotateplane {
