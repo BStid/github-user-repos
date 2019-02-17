@@ -15,6 +15,7 @@
   align-items: center;
   box-shadow: 3px 10px 32px -6px rgba(0, 0, 0, 0.75);
   margin: 25px;
+  cursor: pointer;
 }
 .repoName {
   height: 40%;
@@ -26,7 +27,7 @@
   box-shadow: 3px 10px 31px -14px rgba(0, 0, 0, 0.75);
 }
 .repoBody {
-  height: 60%;
+  height: 40%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -34,4 +35,11 @@
   font-style: italic;
   color: gray;
   text-align: center;
+}
+.repoLanguage {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
