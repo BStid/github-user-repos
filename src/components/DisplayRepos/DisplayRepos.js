@@ -6,12 +6,13 @@ import "./DisplayRepos.css";
 
 export default function DisplayRepos(props) {
   console.log(props.repositories);
+  let renderRepos;
   if (!props.repositories) {
-    var renderRepos = <DisplayError />;
+    renderRepos = <DisplayError />;
   } else if (props.repositories.length < 1) {
-    var renderRepos = <NoReposError />;
+    renderRepos = <NoReposError />;
   } else {
-    var renderRepos = props.repositories.map((repo, index) => {
+    renderRepos = props.repositories.map((repo, index) => {
       return index < 12 ? (
         <div
           className="repoContainer"
