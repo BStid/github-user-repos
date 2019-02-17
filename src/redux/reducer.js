@@ -18,7 +18,6 @@ export const updateInput = input => {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_INPUT:
-      console.log("passing reducer...", action.payload);
       return {
         ...state,
         inputValue: action.payload
