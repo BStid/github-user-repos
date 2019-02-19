@@ -17,6 +17,7 @@ class Body extends Component {
   }
   renderRepos(username) {
     this.setState({ isLoading: true });
+    /* importing fetch function created within the 'api' directory */
     getUserRepos(
       `https://api.github.com/search/repositories?q=user:${username}+stars:<=500&sort=stars`
     ).then(data => {
@@ -24,7 +25,6 @@ class Body extends Component {
     });
   }
   componentDidMount() {
-    /* importing fetch function created within the 'api' directory */
     this.renderRepos(this.props.inputValue);
   }
   render() {
